@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		342C1FA1237873B200533E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C1FA0237873B200533E74 /* AppDelegate.swift */; };
+		342C1FA3237873B200533E74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C1FA2237873B200533E74 /* ViewController.swift */; };
+		342C1FA5237873B300533E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342C1FA4237873B300533E74 /* Assets.xcassets */; };
+		342C1FA8237873B300533E74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C1FA6237873B300533E74 /* Main.storyboard */; };
+		342C1FB4237873B300533E74 /* SpotibarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C1FB3237873B300533E74 /* SpotibarTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		342C1FB0237873B300533E74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 342C1F95237873B200533E74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 342C1F9C237873B200533E74;
+			remoteInfo = Spotibar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		342C1F9D237873B200533E74 /* Spotibar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotibar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		342C1FA0237873B200533E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		342C1FA2237873B200533E74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		342C1FA4237873B300533E74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		342C1FA7237873B300533E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		342C1FA9237873B300533E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		342C1FAA237873B300533E74 /* Spotibar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotibar.entitlements; sourceTree = "<group>"; };
+		342C1FAF237873B300533E74 /* SpotibarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotibarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		342C1FB3237873B300533E74 /* SpotibarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotibarTests.swift; sourceTree = "<group>"; };
+		342C1FB5237873B300533E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		342C1F9A237873B200533E74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		342C1FAC237873B300533E74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		342C1F94237873B200533E74 = {
+			isa = PBXGroup;
+			children = (
+				342C1F9F237873B200533E74 /* Spotibar */,
+				342C1FB2237873B300533E74 /* SpotibarTests */,
+				342C1F9E237873B200533E74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		342C1F9E237873B200533E74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				342C1F9D237873B200533E74 /* Spotibar.app */,
+				342C1FAF237873B300533E74 /* SpotibarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		342C1F9F237873B200533E74 /* Spotibar */ = {
+			isa = PBXGroup;
+			children = (
+				342C1FA0237873B200533E74 /* AppDelegate.swift */,
+				342C1FA2237873B200533E74 /* ViewController.swift */,
+				342C1FA4237873B300533E74 /* Assets.xcassets */,
+				342C1FA6237873B300533E74 /* Main.storyboard */,
+				342C1FA9237873B300533E74 /* Info.plist */,
+				342C1FAA237873B300533E74 /* Spotibar.entitlements */,
+			);
+			path = Spotibar;
+			sourceTree = "<group>";
+		};
+		342C1FB2237873B300533E74 /* SpotibarTests */ = {
+			isa = PBXGroup;
+			children = (
+				342C1FB3237873B300533E74 /* SpotibarTests.swift */,
+				342C1FB5237873B300533E74 /* Info.plist */,
+			);
+			path = SpotibarTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		342C1F9C237873B200533E74 /* Spotibar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 342C1FB8237873B300533E74 /* Build configuration list for PBXNativeTarget "Spotibar" */;
+			buildPhases = (
+				342C1F99237873B200533E74 /* Sources */,
+				342C1F9A237873B200533E74 /* Frameworks */,
+				342C1F9B237873B200533E74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spotibar;
+			productName = Spotibar;
+			productReference = 342C1F9D237873B200533E74 /* Spotibar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		342C1FAE237873B300533E74 /* SpotibarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 342C1FBB237873B300533E74 /* Build configuration list for PBXNativeTarget "SpotibarTests" */;
+			buildPhases = (
+				342C1FAB237873B300533E74 /* Sources */,
+				342C1FAC237873B300533E74 /* Frameworks */,
+				342C1FAD237873B300533E74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				342C1FB1237873B300533E74 /* PBXTargetDependency */,
+			);
+			name = SpotibarTests;
+			productName = SpotibarTests;
+			productReference = 342C1FAF237873B300533E74 /* SpotibarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		342C1F95237873B200533E74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = viktorstrate;
+				TargetAttributes = {
+					342C1F9C237873B200533E74 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					342C1FAE237873B300533E74 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 342C1F9C237873B200533E74;
+					};
+				};
+			};
+			buildConfigurationList = 342C1F98237873B200533E74 /* Build configuration list for PBXProject "Spotibar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 342C1F94237873B200533E74;
+			productRefGroup = 342C1F9E237873B200533E74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				342C1F9C237873B200533E74 /* Spotibar */,
+				342C1FAE237873B300533E74 /* SpotibarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		342C1F9B237873B200533E74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				342C1FA5237873B300533E74 /* Assets.xcassets in Resources */,
+				342C1FA8237873B300533E74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		342C1FAD237873B300533E74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		342C1F99237873B200533E74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				342C1FA3237873B200533E74 /* ViewController.swift in Sources */,
+				342C1FA1237873B200533E74 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		342C1FAB237873B300533E74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				342C1FB4237873B300533E74 /* SpotibarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		342C1FB1237873B300533E74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 342C1F9C237873B200533E74 /* Spotibar */;
+			targetProxy = 342C1FB0237873B300533E74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		342C1FA6237873B300533E74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				342C1FA7237873B300533E74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		342C1FB6237873B300533E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		342C1FB7237873B300533E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		342C1FB9237873B300533E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Spotibar/Spotibar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Spotibar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.viktorstrate.Spotibar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		342C1FBA237873B300533E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Spotibar/Spotibar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Spotibar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.viktorstrate.Spotibar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		342C1FBC237873B300533E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SpotibarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.viktorstrate.SpotibarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spotibar.app/Contents/MacOS/Spotibar";
+			};
+			name = Debug;
+		};
+		342C1FBD237873B300533E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SpotibarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.viktorstrate.SpotibarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spotibar.app/Contents/MacOS/Spotibar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		342C1F98237873B200533E74 /* Build configuration list for PBXProject "Spotibar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				342C1FB6237873B300533E74 /* Debug */,
+				342C1FB7237873B300533E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		342C1FB8237873B300533E74 /* Build configuration list for PBXNativeTarget "Spotibar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				342C1FB9237873B300533E74 /* Debug */,
+				342C1FBA237873B300533E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		342C1FBB237873B300533E74 /* Build configuration list for PBXNativeTarget "SpotibarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				342C1FBC237873B300533E74 /* Debug */,
+				342C1FBD237873B300533E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 342C1F95237873B200533E74 /* Project object */;
+}
