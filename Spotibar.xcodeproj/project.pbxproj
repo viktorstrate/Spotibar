@@ -12,6 +12,10 @@
 		342C1FA5237873B300533E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342C1FA4237873B300533E74 /* Assets.xcassets */; };
 		342C1FA8237873B300533E74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C1FA6237873B300533E74 /* Main.storyboard */; };
 		342C1FB4237873B300533E74 /* SpotibarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C1FB3237873B300533E74 /* SpotibarTests.swift */; };
+		342C1FBF23787CE900533E74 /* Spotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C1FBE23787CE900533E74 /* Spotify.swift */; };
+		342E7E44238C3853006D67E6 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342E7E43238C3853006D67E6 /* NSImage.swift */; };
+		34C550612378A97C00E4D62F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C550602378A97C00E4D62F /* Event.swift */; };
+		34C550642378AD4000E4D62F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C550632378AD4000E4D62F /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,10 +35,13 @@
 		342C1FA4237873B300533E74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		342C1FA7237873B300533E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		342C1FA9237873B300533E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		342C1FAA237873B300533E74 /* Spotibar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spotibar.entitlements; sourceTree = "<group>"; };
 		342C1FAF237873B300533E74 /* SpotibarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotibarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		342C1FB3237873B300533E74 /* SpotibarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotibarTests.swift; sourceTree = "<group>"; };
 		342C1FB5237873B300533E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		342C1FBE23787CE900533E74 /* Spotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spotify.swift; sourceTree = "<group>"; };
+		342E7E43238C3853006D67E6 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		34C550602378A97C00E4D62F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		34C550632378AD4000E4D62F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +83,14 @@
 		342C1F9F237873B200533E74 /* Spotibar */ = {
 			isa = PBXGroup;
 			children = (
+				34C550622378AD3900E4D62F /* Extensions */,
 				342C1FA0237873B200533E74 /* AppDelegate.swift */,
 				342C1FA2237873B200533E74 /* ViewController.swift */,
 				342C1FA4237873B300533E74 /* Assets.xcassets */,
 				342C1FA6237873B300533E74 /* Main.storyboard */,
 				342C1FA9237873B300533E74 /* Info.plist */,
-				342C1FAA237873B300533E74 /* Spotibar.entitlements */,
+				342C1FBE23787CE900533E74 /* Spotify.swift */,
+				34C550602378A97C00E4D62F /* Event.swift */,
 			);
 			path = Spotibar;
 			sourceTree = "<group>";
@@ -93,6 +102,15 @@
 				342C1FB5237873B300533E74 /* Info.plist */,
 			);
 			path = SpotibarTests;
+			sourceTree = "<group>";
+		};
+		34C550622378AD3900E4D62F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				34C550632378AD4000E4D62F /* String.swift */,
+				342E7E43238C3853006D67E6 /* NSImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C550612378A97C00E4D62F /* Event.swift in Sources */,
+				342C1FBF23787CE900533E74 /* Spotify.swift in Sources */,
+				34C550642378AD4000E4D62F /* String.swift in Sources */,
 				342C1FA3237873B200533E74 /* ViewController.swift in Sources */,
+				342E7E44238C3853006D67E6 /* NSImage.swift in Sources */,
 				342C1FA1237873B200533E74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
