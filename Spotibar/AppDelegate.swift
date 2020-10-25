@@ -9,15 +9,21 @@
 import Cocoa
 import ScriptingBridge
 
+class AppState: ObservableObject {
+  @Published var coverImage: NSImage?
+  @Published var spotify: SpotifyApplication = SBApplication(bundleIdentifier: "com.spotify.client")!
+}
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   
-  lazy var spotify: SpotifyApplication = SBApplication(bundleIdentifier: "com.spotify.client")!
+  //lazy var spotify: SpotifyApplication = SBApplication(bundleIdentifier: "com.spotify.client")!
   let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.variableLength)
   var eventMonitor: EventMonitor?
   
   let popover = NSPopover()
   var spotifyTimer: Timer?
+  var appState = AppState()
   
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     // Insert code here to initialize your application
@@ -29,13 +35,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       button.action = #selector(pressItem)
     }
     
+    popover.contentViewController = MenuPopoverViewController.makeViewController(appState: appState)
     
-    
-    eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
+    let _eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
       if let strongSelf = self, strongSelf.popover.isShown {
         strongSelf.closePopover(sender: event)
       }
     }
+    _eventMonitor.start()
+    self.eventMonitor = _eventMonitor
     
     periodicUpdate()
     
@@ -46,7 +54,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   @objc func periodicUpdate() {
     spotifyTimer?.invalidate()
     
-    if self.spotify.isRunning {
+    let spotify = self.appState.spotify
+    
+    if spotify.isRunning {
       if let button = statusItem.button {
         
         let topLine = "\(spotify.currentTrack!.artist!)".truncate(length: 20)
@@ -69,7 +79,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         button.attributedTitle = title
         
-        guard let newArtworkUrl = self.spotify.currentTrack!.artworkUrl else {
+        guard let newArtworkUrl = spotify.currentTrack!.artworkUrl else {
           button.image = nil
           return
         }
@@ -83,6 +93,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             return
           }
           
+          appState.coverImage = originalImage
           let thumbnailImage = originalImage.asThumbnail()
           
           button.image = thumbnailImage
@@ -91,7 +102,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
       }
       
-      spotifyTimer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(periodicUpdate), userInfo: nil, repeats: false)
+      appState.objectWillChange.send()
+      
+      spotifyTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(periodicUpdate), userInfo: nil, repeats: false)
     } else {
       if let button = self.statusItem.button {
         button.attributedTitle = NSAttributedString(string: "")
@@ -100,14 +113,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       
       spotifyTimer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(periodicUpdate), userInfo: nil, repeats: false)
     }
+    
+    self.statusItem.isVisible = spotify.isRunning
+  }
+  
+  func showPopover(sender: Any?) {
+    if let button = statusItem.button {
+      popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+    }
   }
   
   func closePopover(sender: Any?) {
-    
+    popover.close()
   }
   
   @objc func pressItem(_ sender: Any) {
-    periodicUpdate()
+    //periodicUpdate()
+    
+    if popover.isShown {
+      closePopover(sender: sender)
+    } else {
+      showPopover(sender: sender)
+    }
   }
   
   func applicationWillTerminate(_ aNotification: Notification) {

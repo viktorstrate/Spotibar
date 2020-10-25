@@ -63,3 +63,36 @@ extension SBApplication: SpotifyApplication {}
   @objc optional func setSpotifyUrl(_ spotifyUrl: String!) // The URL of the track.
 }
 extension SBObject: SpotifyTrack {}
+
+extension SpotifyApplication {
+  
+  func trackDurationFormatted() -> String {
+    guard var duration = self.currentTrack?.duration else {
+      return "0:00"
+    }
+    
+    duration /= 1000
+    let (minutes, seconds) = duration.quotientAndRemainder(dividingBy: 60) as (Int, Int)
+    
+    return NSString(format: "%01d:%02d", minutes, seconds) as String
+  }
+  
+  func trackPlaytimeFormatted() -> String {
+    guard let playerPos = self.playerPosition else {
+      return "0:00"
+    }
+    
+    let (minutes, seconds) = Int(playerPos).quotientAndRemainder(dividingBy: 60) as (Int, Int)
+    
+    return NSString(format: "%01d:%02d", minutes, seconds) as String
+  }
+  
+  func trackProgress() -> Double {
+    guard let duration = self.currentTrack?.duration, let playerPos = self.playerPosition else {
+      return 0
+    }
+    
+    return playerPos / Double(duration) * 1000.0
+  }
+  
+}
