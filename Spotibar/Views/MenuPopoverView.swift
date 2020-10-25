@@ -34,6 +34,7 @@ struct MenuPopoverView: View {
           Button(action: {
             if let shuffling = appState.spotify.shuffling {
               appState.spotify.setShuffling?(!shuffling)
+              updateSpotifyState()
             }
           }) {
             Image("media-shuffle").colorInvert().colorMultiply(appState.spotify.shuffling == true ? .red : .black)
@@ -45,6 +46,7 @@ struct MenuPopoverView: View {
             
             Button(action: {
               appState.spotify.previousTrack?()
+              updateSpotifyState()
             }) {
               Image("media-arrow").rotationEffect(Angle(degrees: 180))
             }.buttonStyle(PlainButtonStyle())
@@ -55,6 +57,7 @@ struct MenuPopoverView: View {
               } else {
                 appState.spotify.play?()
               }
+              updateSpotifyState()
             }) {
               if let playerState = appState.spotify.playerState, playerState == .playing {
                 Image("media-pause")
@@ -65,6 +68,7 @@ struct MenuPopoverView: View {
             
             Button(action: {
               appState.spotify.nextTrack?()
+              updateSpotifyState()
             }) {
               Image("media-arrow")
             }.buttonStyle(PlainButtonStyle())
@@ -75,6 +79,7 @@ struct MenuPopoverView: View {
           Button(action: {
             if let repeating = appState.spotify.repeating {
               appState.spotify.setRepeating?(!repeating)
+              updateSpotifyState()
             }
           }) {
             Image("media-repeat").colorInvert().colorMultiply(appState.spotify.repeating == true ? .red : .black)
@@ -142,6 +147,12 @@ struct MenuPopoverView: View {
   
   static func makeViewController(appState: AppState) -> NSViewController {
     return NSHostingController(rootView: MenuPopoverView(appState: appState))
+  }
+  
+  fileprivate func updateSpotifyState() {
+    DispatchQueue.main.async {
+      appState.objectWillChange.send()
+    }
   }
 }
 
